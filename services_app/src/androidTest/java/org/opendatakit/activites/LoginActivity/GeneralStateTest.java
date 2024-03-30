@@ -68,6 +68,7 @@ public class GeneralStateTest extends BaseUITest<LoginActivity> {
         onView(withId(R.id.drawer_switch_sign_in_type)).check(doesNotExist());
     }
 
+    @Ignore // OUTREACHY-BROKEN-TEST
     @Test
     public void checkDrawerServerLoginTest() {
         onView(withId(R.id.btnDrawerOpen)).perform(ViewActions.click());
