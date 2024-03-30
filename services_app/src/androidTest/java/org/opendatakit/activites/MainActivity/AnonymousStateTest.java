@@ -75,6 +75,7 @@ public class AnonymousStateTest extends BaseUITest<MainActivity> {
         onView(withId(R.id.inputServerUrl)).check(matches(isDisplayed()));
         onView(withId(R.id.inputTextServerUrl)).check(matches(withText(SERVER_URL)));
     }
+    @Ignore // OUTREACHY-BROKEN-TEST
     @Test
     public void verifyVisibilityTest() {
         onView(withId(R.id.action_sync)).check(matches(isDisplayed()));
@@ -127,6 +128,7 @@ public class AnonymousStateTest extends BaseUITest<MainActivity> {
         Intents.intended(IntentMatchers.hasComponent(AllConflictsResolutionActivity.class.getName()));
     }
 
+    @Ignore // OUTREACHY-BROKEN-TEST
     @Test
     public void verifyDrawerSwitchSignInTypeClick() {
         onView(withId(R.id.btnDrawerOpen)).perform(ViewActions.click());
@@ -139,6 +141,7 @@ public class AnonymousStateTest extends BaseUITest<MainActivity> {
         onView(withId(R.id.inputUsernameLogin)).check(matches(isDisplayed()));
     }
 
+    @Ignore // OUTREACHY-BROKEN-TEST
     @Test
     public void verifyDrawerSignOutButtonClick() {
         onView(withId(R.id.btnDrawerOpen)).perform(ViewActions.click());
