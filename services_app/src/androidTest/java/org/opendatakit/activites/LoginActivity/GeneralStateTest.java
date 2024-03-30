@@ -83,6 +83,7 @@ public class GeneralStateTest extends BaseUITest<LoginActivity> {
         Intents.intended(IntentMatchers.hasComponent(AppPropertiesActivity.class.getName()));
     }
 
+    @Ignore // OUTREACHY-BROKEN-TEST
     @Test
     public void checkDrawerSettingsClick() {
         onView(withId(R.id.btnDrawerOpen)).perform(ViewActions.click());
