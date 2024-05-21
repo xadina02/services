@@ -25,6 +25,7 @@ jobs:
           no-window: true
           restore-gradle-cache-prefix: v2
           post-emulator-launch-assemble-command: ./gradlew installSnapshotDebug 
+      - android/disable-animations
       - android/run-tests:
           test-command: ./gradlew testSnapshotDebugUnitTest
       - android/run-tests:
