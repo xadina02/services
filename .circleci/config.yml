@@ -55,8 +55,15 @@ jobs:
       - android/save-gradle-cache:
           cache-prefix: v1
       - run:
-          name: Build Common
+          name: Build Services
           command: ./gradlew assembleSnapshotDebug
+      - store_artifacts:
+          name: Store Build Artifacts
+          path: services_app/build/outputs/apk
+      - persist_to_workspace:
+          root: .
+          paths:
+            - services_app/build/outputs/apk
 
 workflows:
   build-test-workflow:
