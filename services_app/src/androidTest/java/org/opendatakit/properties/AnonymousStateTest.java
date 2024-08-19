@@ -9,19 +9,18 @@ import androidx.test.platform.app.InstrumentationRegistry;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.opendatakit.BaseFileTest;
 import org.opendatakit.services.sync.actions.fragments.ChooseSignInTypeFragment;
 import org.opendatakit.services.utilities.UserState;
 import org.opendatakit.utilities.StaticStateManipulator;
 
-import java.util.HashMap;
-import java.util.Map;
-
-public class AnonymousStateTest {
+public class AnonymousStateTest extends BaseFileTest {
 
     public final String APP_NAME = "AnonymousStatePropTest";
 
     @Before
     public void setUp() {
+        verifyReady();
         StaticStateManipulator.get().reset();
 
         PropertiesSingleton props = getProps(getContext());
