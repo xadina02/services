@@ -1,0 +1,33 @@
+<PreferenceScreen xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="@string/user_access_preferences" >
+        <CheckBoxPreference
+            android:id="@+id/change_server"
+            android:defaultValue="true"
+            android:key="common.change_sync_server"
+            android:title="@string/server_url"
+            android:persistent="false" />
+        <CheckBoxPreference
+            android:id="@+id/change_credential"
+            android:defaultValue="true"
+            android:key="common.change_auth_credentials"
+            android:title="@string/credential"
+            android:persistent="false" />
+        <CheckBoxPreference
+            android:id="@+id/change_username_password"
+            android:defaultValue="true"
+            android:key="common.change_username_password"
+            android:title="@string/username_password"
+            android:persistent="false" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/testing_support">
+        <CheckBoxPreference
+                android:id="@+id/allow_non_secure_authentications"
+                android:defaultValue="false"
+                android:key="common.non_secure_authentication"
+                android:title="@string/non_secure_authentication"
+                android:summary="@string/non_secure_summary"
+                android:persistent="false"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -1,0 +1,9 @@
+build
+.gradle
+.idea
+local.properties
+*.iml
+*.o
+*.d
+services_app/fabric.properties
+odkanalytics/

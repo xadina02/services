@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string name="app_name">ODK-X Services</string>
+
+    <string name="services_notice">ODK-X Services provides database, file access, and data synchronization services to all ODK-X applications.</string>
+    <string name="action_admin_settings">Admin Settings</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_about">About</string>
+    <string name="action_sync">Sync</string>
+    <!--<string name="action_logout">Logout</string>-->
+    <string name="action_change_user">Change User/Logout</string>
+    <string name="action_resolve_conflict">Resolve Conflicts</string>
+    <string name="action_verify_server_settings">Update User Permissions</string>
+
+    <!-- Checkpoint and Conflict Resolution Stuff -->
+    <string name="all_conflicts_notice">Please wait - scanning for conflicts&#8230;</string>
+    <string name="all_tables_scanned_for_conflicts">All tables have been scanned for conflicts</string>
+    <string name="cancel">Cancel</string>
+    <string name="yes">Yes</string>
+    <string name="take_local">Take Local Version</string>
+    <string name="take_server">Take Server Version</string>
+    <string name="mark_resolved">Mark Resolved</string>
+    <string name="resolve_cannot_complete_message">A value has not been chosen for every conflicting column. The row cannot be resolved.</string>
+    <string name="conflict_local_was_deleted_explanation">You have deleted a row someone else has edited.</string>
+    <string name="conflict_server_was_deleted_explanation">Another user has deleted a row you have edited.</string>
+    <string name="conflict_resolve_or_choose">Another user has edited the same row you have edited.</string>
+    <string name="radio_button_message_restore_local_deleted">Restore and resolve.</string>
+    <string name="radio_button_message_delete_local_deleted">Ignore changes, delete on server.</string>
+    <string name="radio_button_message_restore_server_deleted">Restore and resolve.</string>
+    <string name="radio_button_message_delete_server_deleted">Delete and lose local changes.</string>
+
+    <string name="conflict_take_local_warning">Overwrite all server changes with the local changes?</string>
+    <string name="conflict_take_server_warning">Overwrite all local changes with the server changes?</string>
+    <string name="conflict_take_local_with_deltas_warning">Overwrite local and server changes with the selected values?</string>
+    <string name="conflict_delete_local_confirmation_warning">Delete the row and lose your local changes?</string>
+    <string name="conflict_delete_on_server_confirmation_warning">Delete row on server?</string>
+
+    <string name="checkpoint_restore_complete_or_take_newest">Restore to earlier Finalized state or Save checkpoint as Incomplete</string>
+    <string name="checkpoint_restore_incomplete_or_take_newest">Restore to previous Incomplete Save or Save checkpoint as Incomplete</string>
+    <string name="checkpoint_remove_or_take_newest">Discard or Save checkpoint as Incomplete</string>
+
+    <string name="select_checkpoint_to_resolve">Select the row with checkpoints to resolve</string>
+    <string name="no_items_display_checkpoints">Please wait&#8230;\nSearching for checkpoint rows to resolve.</string>
+    <string name="checkpoint_take_all_oldest_or_remove">Discard All Checkpoints</string>
+    <string name="checkpoint_take_all_newest">Update All Checkpoints to Incomplete State</string>
+    <string name="silently_resolved_single_checkpoint">A checkpoint on an unmodifiable row was
+        silently rolled back.</string>
+    <string name="silently_resolved_checkpoints">%1$d checkpoints on unmodifiable rows were
+        silently rolled back.</string>
+
+    <string name="checkpoint_radio_local">Apply:</string>
+    <string name="checkpoint_radio_server">Restore:</string>
+    <string name="checkpoint_take_oldest">Discard Checkpoint</string>
+    <string name="checkpoint_take_oldest_remove">Discard</string>
+    <string name="checkpoint_take_oldest_finalized">Restore to prior Finalized State</string>
+    <string name="checkpoint_take_oldest_incomplete">Restore to prior Incomplete State</string>
+    <string name="checkpoint_take_newest">Apply all changes and Save as Incomplete</string>
+    <string name="checkpoint_take_newest_with_deltas">Apply Indicated Changes and Save as Incomplete</string>
+
+    <string name="checkpoint_delete_warning">Delete entirely?</string>
+    <string name="checkpoint_take_oldest_warning">Discard the Checkpoint and Proceed?</string>
+    <string name="checkpoint_take_newest_warning">Save all changes as Incomplete and Proceed?</string>
+    <string name="checkpoint_take_newest_with_deltas_warning">Apply Indicated Changes, Save as Incomplete and Proceed?</string>
+
+    <string name="checkpoint_auto_apply">No user-defined field differences &#8212; automatically discarding checkpoint.</string>
+    <string name="checkpoint_auto_apply_all">No user-defined field differences in any rows\nAutomatically discarded checkpoints.</string>
+
+    <string name="select_conflict_to_resolve">Select the row with conflicts to resolve</string>
+    <string name="no_items_display_conflicts">Please Wait&#8230;\nSearching for conflicting rows to resolve.</string>
+    <string name="conflict_take_all_local_updates">Take Local Version - Reject All Server Changes</string>
+    <string name="conflict_take_all_server_updates">Take Server Version - Discard Local Changes</string>
+    <string name="silently_resolved_single_conflict">A conflict on an unmodifiable row was
+        silently resolved using the server\'s changes.</string>
+    <string name="silently_resolved_conflicts">%1$d conflicts on unmodifiable rows were silently
+        resolved using the server\'s changes.</string>
+
+    <string name="conflict_resolving_all">Resolving All Conflicts</string>
+    <string name="resolving_row_n_of_m">Resolving row %1$d of %2$d</string>
+    <string name="resolver_already_active">Action already in progress</string>
+    <string name="done_resolving_rows">Completed</string>
+
+    <string name="conflict_radio_local">Local:</string>
+    <string name="conflict_radio_server">Server:</string>
+    <string name="conflict_take_local_updates">Take Local Version</string>
+    <string name="conflict_take_server_updates">Take Server Version</string>
+    <string name="conflict_take_local_with_deltas">Merge Changes as Indicated Below</string>
+
+    <string name="conflict_restore_with_server_changes">Restore local record with server updates</string>
+    <string name="conflict_restore_with_local_changes">Restore server record with local updates</string>
+    <string name="conflict_enforce_local_delete">Delete record on server</string>
+    <string name="conflict_apply_delete_from_server">Delete local record</string>
+
+    <string name="conflict_auto_apply">No user-defined field differences &#8212; automatically taking server metadata revisions.</string>
+    <string name="conflict_auto_apply_all">No user-defined field differences in any rows.\nAutomatically took server revisions.</string>
+
+    <string name="conflict_database_consistency_error">Database consistency issue when resolving conflicts &#8212; contact the ODK Team</string>
+
+    <string name="resolve_row_display_name">Form: %1$s Instance: %2$s</string>
+    <!-- Sync Service and Notifications stuff -->
+    <string name="sync_notification_channel_name">Sync Notification (%1$s)</string>
+    <string name="sync_ticker">ODK-X Syncing</string>
+    <string name="sync_foreground_text">ODK-X is syncing an Application</string>
+
+    <!-- progress dialog titles -->
+    <string name="sync_in_progress">Syncing in progress&#8230;</string>
+    <string name="sync_app_level_files">Syncing application configuration&#8230;</string>
+    <string name="sync_table_level_files">Syncing table and form configuration&#8230;</string>
+    <string name="sync_row_data">Syncing data&#8230;</string>
+
+    <!-- outcome dialog titles -->
+    <string name="sync_communications_error">A communications error occurred</string>
+    <string name="sync_device_internal_error">An internal error occurred</string>
+    <string name="sync_resync_because_config_reset_error">The server config was reset during this sync. Please restart.</string>
+    <string name="sync_user_authorization_failure">User authorization failure</string>
+    <string name="sync_server_configuration_failure">Server configuration failure</string>
+    <string name="sync_device_configuration_failure">Device configuration failure</string>
+    <string name="sync_conflicts_need_resolving">Conflicts detected</string>
+    <string name="sync_conflicts_text">Other users have modified the same entries that you have.\nYou now will be directed to merge your changes with theirs.</string>
+    <string name="sync_successful">Sync successful</string>
+    <string name="sync_successful_text">Success! Your application content (data and configuration) matches that on the server.</string>
+    <string name="sync_complete_pending_attachments">Sync (without attachments) successful</string>
+    <string name="sync_complete_pending_attachments_text">Configuration and data have been sync\'d, but not all attachments have been sync\'d. Most common reasons include:\n\t-You or another user elected not to fully sync attachments\n\t-There was a problem transferring the files</string>
+
+    <!-- intermediate progress messages -->
+    <string name="sync_starting">Starting sync&#8230;</string>
+    <string name="sync_getting_app_level_manifest">Retrieving list of application files from server.</string>
+
+    <string name="sync_uploading_local_file">Uploading %1$s to server.</string>
+    <string name="sync_deleting_file_on_server">Deleting %1$s on server.</string>
+    <string name="sync_verifying_local_file">Verifying %1$s matches version on server.</string>
+    <string name="sync_deleting_local_file">Deleting %1$s on device.</string>
+
+    <string name="sync_getting_table_manifest">Retrieving list of %1$s files from server.</string>
+
+    <string name="sync_table_data_sync_complete">Completed sync of %1$s dataset with server.</string>
+    <string name="sync_table_data_sync_skipped">Skipped sync of %1$s dataset (syncing config failed).</string>
+    <string name="sync_table_data_sync_pending_attachments">Partially completed sync of %1$s dataset with server. Not all attachments synced.</string>
+    <string name="sync_table_data_sync_with_conflicts">Partially completed sync of %1$s dataset with server. Resolve conflicts and resync.</string>
+    <string name="sync_table_contains_checkpoints">Checkpoints must be resolved before sync can proceed.</string>
+    <string name="sync_table_erroneous_filter">Internal error when querying database.</string>
+    <string name="sync_table_erroneous_conflict_type">Internal error when resolving server data against locally conflicting row.</string>
+
+    <string name="sync_verifying_app_name_on_server">Verifying server supports this user application name.</string>
+    <string name="sync_obtaining_user_permissions_from_server">Retrieving user permissions from server.</string>
+    <string name="sync_retrieving_tables_list_from_server">Retrieving list of tables from server.</string>
+    <string name="sync_verifying_table_schema_on_server">Verifying %1$s schema matches that on server.</string>
+    <string name="sync_creating_local_table">Creating %1$s&#8230;</string>
+    <string name="sync_dropping_local_table">Deleting %1$s from device&#8230;</string>
+    <string name="sync_table_level_file_sync_complete">Completed sync of all %1$s configuration files.</string>
+    <string name="sync_table_level_sync_failed">Failed table %1$s configuration sync.</string>
+
+    <string name="sync_getting_changed_rows_on_server">Fetching %1$s dataset changes from server.</string>
+    <string name="sync_anaylzing_local_row_changes">Collecting %1$s local row changes to send to server.</string>
+    <string name="sync_applying_batch_server_row_changes">Applying a batch of %1$s row updates from server.</string>
+    <string name="sync_fetching_local_rows_in_batch_server_row_changes">Fetching %1$s rows matching row updates from server.</string>
+    <string name="sync_succeeded_pulling_rows_from_server">Successfully pulled all %1$s row updates from server.</string>
+    <string name="sync_failed_pulling_rows_from_server">Failed while pulling %1$s row updates from server.</string>
+
+    <string name="sync_calculating_rows_to_push_to_server">Counting row changes in %1$s to send to server.</string>
+    <string name="sync_pushing_local_row_changes_to_server">Pushing row changes in %1$s to server.</string>
+    <string name="sync_server_row_updated">Updating %1$s dataset row %2$d of %3$d on server succeeded.</string>
+    <string name="sync_server_row_update_failed">Updating %1$s dataset row %2$d of %3$d on server failed.</string>
+    <string name="sync_server_row_update_denied">Updating %1$s dataset row %2$d of %3$d on server denied.</string>
+    <string name="sync_updating_data_etag_after_push_to_server">Completed a bulk-update of %1$s on server.</string>
+    <string name="sync_completed_push_to_server">Successfully updated %1$s on server.</string>
+
+    <string name="sync_upserting_server_row">Sending %1$s dataset row %2$d of %3$d to server.</string>
+    <string name="sync_altering_server_row">Sending %1$s dataset row %2$d of %3$d to server.</string>
+    <string name="sync_deleting_server_row">Deleting %1$s dataset row %2$d of %3$d on server.</string>
+    <string name="sync_skipping_attachments_server_row">Skipping %1$s attachments for row %2$d of %3$d on server.</string>
+    <string name="sync_uploading_attachments_server_row">Uploading %1$s attachments for row %2$d of %3$d to server.</string>
+    <string name="sync_downloading_attachments_server_row">Downloading %1$s attachments for row %2$d of %3$d from server.</string>
+    <string name="sync_syncing_attachments_server_row">Syncing %1$s attachments for row %2$d of %3$d with server.</string>
+    <string name="sync_attachment_no_changes">No attachments to sync for %1$s.</string>
+    <string name="sync_count_attachment_changes">Counting rows with attachments to sync for %1$s</string>
+    <string name="sync_fetch_batch_attachment_changes">Fetching first batch of rows with attachments to sync on %1$s</string>
+    <string name="sync_attachment_completed">Completed syncing attachments for %1$s.</string>
+
+    <string name="sync_deleting_local_row">Deleting %1$s local dataset row %2$d of %3$d.</string>
+    <string name="sync_deferring_delete_local_row">Deferring full delete %1$s local dataset row %2$d of %3$d.</string>
+    <string name="sync_updating_local_row">Updating %1$s local dataset row %2$d of %3$d.</string>
+    <string name="sync_inserting_local_row">Inserting %1$s local dataset row %2$d of %3$d.</string>
+    <string name="sync_marking_conflicting_local_row">Mark conflicting %1$s local dataset row %2$d of %3$d.</string>
+
+    <!-- Sync User Interface stuff -->
+    <string name="sync_details">Sync Configuration:</string>
+    <string name="sync_server_url">Server URL</string>
+    <string name="sync_default_server_url">https://tables-demo.odk-x.org</string>
+    <string name="sync_account">Account:</string>
+    <string name="sync_progress_state_label">Sync Progress State</string>
+    <string name="sync_progress_message_label">Sync Progress Message</string>
+    <string name="sync_save_settings">Save settings</string>
+    <string name="sync_auth_account">Authorize account</string>
+    <string name="sync_instance_files">Sync Instance Attachments</string>
+    <string name="sync_defer_instance_files">Defer Instance Attachments</string>
+    <string name="sync_start">Sync now</string>
+    <string name="sync_reset_server">Reset App Server</string>
+    <string name="last_sync">Last Sync</string>
+    <string name="last_sync_not_available">Not Available</string>
+    <string name="sync_confirm_change_settings">Confirm Change Settings</string>
+    <string name="sync_change_settings_warning">If you change your settings, tables you have sync\'d now may no longer be able to be sync\'d.</string>
+    <string name="sync_save">Save</string>
+
+    <string name="sync_choose_account">Please choose an account</string>
+    <string name="sync_waiting_auth">Waiting on authentication</string>
+
+    <string name="sync_confirm_reset_app_server">Confirm Reset App Server</string>
+    <string name="sync_reset_app_server_warning">Resetting the App Server will clear all data currently on the server.</string>
+    <string name="sync_reset">Reset</string>
+
+    <string name="sync_other_auth_fail">Authorization request failed %1$s</string>
+    <string name="sync_auth_unsuccessful">Please resolve the reported authorization issues and try again.</string>
+
+    <string name="sync_configure_username_password">Username authentication was selected but
+        a username and password are not configured. Please update your settings.</string>
+    <string name="sync_configure_credentials">No authentication type has been selected.
+        Please update your settings.</string>
+
+    <string name="verify_server_settings_start">Verify User Permissions</string>
+    <string name="verify_server_settings_starting">Starting fetch of user permissions&#8230;</string>
+    <string name="verifying_server_settings">Verifying User Permissions&#8230;</string>
+    <string name="verify_server_setttings_successful">Verification successful</string>
+    <string name="verify_server_setttings_successful_text">Success! User permissions have been updated.</string>
+    <string name="verify_server_settings_header">Permissions</string>
+    <string name="click_to_verify_server_settings">Verify user permissions</string>
+    <string name="warning_no_user_roles">Warning: User permissions have not been verified!\nRunning with reduced privileges.</string>
+    <!-- sync service layer messages -->
+    <string name="sync_notification_syncing">"ODK-X Sync In Progress %1$s</string>
+    <string name="sync_notification_launch_sync_progress_intent">ODK-X Sync Progress</string>
+    <string name="sync_notification_failure">"ODK-X Sync %1$s Error</string>
+    <string name="sync_notification_conflicts">"ODK-X Sync %1$s Conflicts Exist</string>
+    <string name="sync_notification_conflicts_text">"%1$d tables have data conflicts or checkpoints and were not completely synced.</string>
+    <string name="sync_notification_success_verify_complete">"ODK-X Sync %1$s Server Settings Verified</string>
+    <string name="sync_notification_success_verify_complete_text">ODK-X User Credentials and Permissions Updated</string>
+    <string name="sync_notification_success_complete">"ODK-X Sync %1$s Completed Successfully</string>
+    <string name="sync_notification_success_complete_text">Sync Completed Successfully</string>
+    <string name="sync_notification_success_pending_attachments">"ODK-X Sync %1$s Completed Pending Attachments</string>
+    <string name="sync_notification_success_pending_attachments_text">"Sync Completed with %1$d tables having out-of-date row attachments.</string>
+    <string name="sync_status_network_transport_error">Network Error.\nPlease verify your device browser can access your server.</string>
+    <string name="sync_status_device_internal_error">Internal Error.\nPlease submit a bug report</string>
+    <string name="sync_status_authentication_error">Authentication Error.\nPlease verify your
+        username/password or your account access.</string>
+    <string name="sync_status_internal_server_error">Internal Server Error (500).\nPlease notify your server administrator.</string>
+    <string name="sync_status_bad_gateway_or_client_config">WiFi Gateway or Configuration Error.\nPlease verify the server URL and that your device browser can access your server.</string>
+    <string name="sync_status_request_or_protocol_error">Protocol Error.\nPlease verify that the server and device are compatible.</string>
+    <string name="sync_status_appname_not_supported_by_server">Server is not configured for this appName.\nPlease verify server configuration.</string>
+    <string name="sync_status_server_missing_config_files">Server does not have all app-level or table-level configuration for this APK version.\nDid you intend to reset the server?</string>
+    <string name="sync_status_server_reset_failed_device_has_no_config_files">Device does not have any configuration.\nDid you intend to sync to server?</string>
+    <string name="sync_status_resync_because_config_has_been_reset_error">The app server has been reset since the last time you synced, and the schema has changed. The sync has been aborted.\n To sync with server, delete folder opendatakit/%1$s. Notice that doing so will wipe out all data and such data is not recoverable.</string>
+    <!-- settings screen stuff -->
+    <string name="action_bar_admin_settings">%1$s &gt; Admin Settings</string>
+    <string name="admin_settings">Admin Settings</string>
+
+    <string name="admin_access_settings">Tap for admin access to settings</string>
+    <string name="user_access_preferences">User can change General Settings items:</string>
+
+    <string name="admin_password_settings_summary">Admin password Enabled. Click to change admin password</string>
+    <string name="admin_password_disabled_click_to_set">No Admin password. Click to enable.</string>
+    <string name="admin_password_settings">Admin Password</string>
+    <string name="admin_password">Admin Password</string>
+    <string name="user_restrictions">Restrictions</string>
+    <string name="enable_user_restrictions">Enable user restrictions</string>
+    <string name="change_admin_password">Change Admin Password</string>
+    <string name="enable_admin_password">Enable Admin Password</string>
+
+    <string name="enter_admin_password">Enter Admin password:</string>
+
+    <string name="click_to_change_password">Click to change password</string>
+
+    <string name="current_user">Currently logged in as:</string>
+
+    <string name="change_user">Change User</string>
+    <string name="new_user">Authenticate New User</string>
+    <string name="logout">Log Out</string>
+    <string name="authenticate_credentials">Authenticate Credentials</string>
+
+    <string name="sync_pending_changes">Sync Pending Changes</string>
+    <string name="resolve_pending_changes">You have changes that have not been synced to
+        the server. If you change users or logout before syncing these changes, you may
+        lose them.</string>
+    <string name="resolve_with_sync">Sync Changes</string>
+    <string name="ignore_changes">Ignore Unsynced Changes</string>
+
+    <string name="resolve_checkpoints_and_conflicts">Resolve Checkpoints and Conflicts</string>
+    <string name="resolve_pending_checkpoints_and_conflicts">You have checkpoint rows and/or conflicts with the server that must be resolved before you can change your authenticated user.</string>
+
+    <string name="anonymous_warning">Authenticate new credentials?\n\nWarning: If
+        you choose not verify your credentials you will be logged out.</string>
+    <string name="authentication_error">Authentication Error</string>
+
+    <string name="enter_new_user">Enter new username:</string>
+    <string name="enter_new_password">Enter new password:</string>
+    <string name="enter_server_password">Server password:</string>
+    <string name="verify_new_password">Re-enter new password</string>
+    <string name="password_changed">Password successfully changed</string>
+    <string name="admin_password_disabled">Admin password disabled</string>
+    <string name="admin_password_enabled">Admin password enabled</string>
+    <string name="password_mismatch">Sorry, passwords do not match!</string>
+    <string name="show_password_text">Show password</string>
+
+    <string name="action_bar_general_settings">General Settings</string>
+    <string name="action_bar_general_settings_admin_mode">General Settings (Admin)</string>
+    <string name="general_settings">General Settings</string>
+    <string name="admin_general_settings">Admin Access to Settings</string>
+    <string name="opendatakit_website">Open Data Kit user documentation</string>
+    <string name="user_documentation">User Documentation</string>
+    <string name="click_to_web">Tap to visit https://docs.odk-x.org</string>
+    <string name="visit_user_docs">Read the Open Data Kit user documentation at https://docs.odk-x.org</string>
+    <string name="opendatakit_url">https://docs.odk-x.org</string>
+
+    <string name="server_settings_summary">User identity, authentication and server configuration</string>
+    <string name="server">Server</string>
+    <string name="server_restrictions_apply">Server Settings (non-Admin restrictions apply)</string>
+    <string name="server_url">Server URL</string>
+    <string name="change_server_url">Server URL</string>
+    <string name="url_error">Sorry, invalid URL!</string>
+    <string name="url_error_whitespace">whitespace is not allowed in urls</string>
+
+    <string name="restrict_server_settings_summary">Limit non-Admin ability to change Server Settings</string>
+    <string name="restrict_server">Manage ability to change Server Settings</string>
+    <string name="credential">Server Sign-on Credential</string>
+    <string name="change_credential">Change Sign-on Credential</string>
+
+    <string name="username_password">Username and/or Password</string>
+    <string name="username">Username</string>
+    <string name="change_username">ODK-X Username</string>
+    <string name="password">Server Password</string>
+    <string name="change_server_password">Server Password</string>
+    <string name="no_account">No account</string>
+    <string name="anonymous">None (anonymous access)</string>
+    <string name="credential_type_prefix">Credentials: </string>
+
+    <string name="testing_support">Non-Production (Test) Settings:</string>
+    <string name="non_secure_authentication">Allow unsafe/unsecured Authentication</string>
+    <string name="non_secure_summary">Authenticate over http: (testing support)</string>
+
+    <string name="restrict_device_settings_summary">Limit non-Admin ability to change Device Settings</string>
+    <string name="restrict_device">Manage ability to change Device Settings</string>
+
+    <string name="device_settings_summary">Device-specific Configuration</string>
+    <string name="configure_device_settings">Configure device settings</string>
+    <string name="device">Device Settings</string>
+    <string name="preferences">Preferences</string>
+    <string name="device_restrictions_apply">Device Settings (non-Admin restrictions apply)</string>
+
+    <string name="default_locale">Default Locale</string>
+    <string name="change_default_locale">Change Default Locale</string>
+    <string name="system_locale">Device Locale (%1$s)</string>
+    <string name="font_size">Text Font Size</string>
+    <string name="change_font_size">Text Font Size</string>
+
+    <string name="show_splash">Show Splash Screen</string>
+    <string name="show_splash_summary">Shows when application starts</string>
+    <string name="splash_path">Selected Splash Image</string>
+    <string name="default_splash_path">ODK-X Default</string>
+    <string name="select_another_image">Select Another Image</string>
+    <string name="use_odk_default">Use Default Image</string>
+    <string name="change_splash_path">Change Image</string>
+    <string name="admin_change_splash_settings">Change Splash Screen settings</string>
+    <string name="splash_media_save_failed">Unable to copy selected splash screen image</string>
+
+    <string name="tool_tables_settings">Tables-specific Settings</string>
+    <string name="odkx_tables">ODK-X Tables</string>
+    <string name="tool_tables_restrictions_apply">Tables-specific settings (non-Admin restrictions apply)</string>
+    <string name="tool_tables_settings_summary">ODK-X Tables-specific settings</string>
+    <string name="settings_for_odkx_tables">Settings for ODK-X Tables</string>
+    <string name="custom_home_screen">Use custom home screen</string>
+    <string name="admin_tool_tables_settings">Manage ability to change Tables-specific Settings</string>
+    <string name="admin_tool_tables_settings_summary">Limit non-Admin ability to change Tables-specific Settings</string>
+    <string name="change_custom_home_screen">Change use of custom home screen</string>
+
+    <string name="clear_configuration_settings">Reset configuration</string>
+    <string name="clear_settings">Clear Settings</string>
+    <string name="exit_admin_mode">Exit admin mode</string>
+    <string name="click_to_clear_settings">Click to clear settings</string>
+    <string name="reset_configuration">Reset configuration</string>
+    <string name="click_to_exit_admin_settings">Click to exit admin settings</string>
+
+    <string name="reset_settings">Configuration Reset</string>
+    <string name="confirm_reset_settings">Device-specific and
+        user identity settings will be cleared and all tools will re-run their
+        initialization logic.\n\nDo you wish to proceed?</string>
+
+    <string name="write_external_storage_rationale">ODK-X Services needs to access external storage to store resources and interact with other ODK apps</string>
+    <string name="write_external_perm_denied">ODK-X Services cannot function without write access to external storage</string>
+    <!-- legacy submission logic -->
+    <string name="success">Success</string>
+    <string name="scanning_cancelled">You cancelled Scanning</string>
+    <string name="invalid_qr_code">Invalid Qr code</string>
+    <string name="qr_code_scanner_instruction">Place QR Code inside the rectangle</string>
+    <string name="permission_denied">Permission denied</string>
+    <string name="camera_permission_rationale">ODK-X Services requires Camera permission to scan QR code</string>
+    <string name="allow">Allow</string>
+    <string name="not_now">Not now</string>
+    <string name="no">No</string>
+    <string name="configure_server_settings">Do you want to configure the server settings now?</string>
+
+    <string name="preparing_to_sync">Preparing to Sync</string>
+
+
+    <string name="app_bar_label">SERVICES</string>
+    <string name="main_activity_server_url_label">Server URL:</string>
+    <string name="main_activity_current_user_state_label">Current User State:</string>
+    <string name="main_activity_username_label">Username of User :</string>
+    <string name="main_activity_last_synced_time_label">Last Synced Time</string>
+    <string name="toolbar_item_sync">Sync</string>
+    <string name="toolbar_item_verify">Verify Server Details</string>
+    <string name="toolbar_item_settings">Settings</string>
+
+    <string name="drawer_sign_in_button_text">Sign-In </string>
+    <string name="drawer_sign_out_button_text">Sign-Out </string>
+    <string name="drawer_item_merge_conflicts">Merge Conflicts</string>
+    <string name="drawer_item_update_credentials">Verify Permissions</string> <!-- Previously " Update Credentials" -->
+    <string name="drawer_item_switch_sign_in_type">Switch Sign In</string>
+    <string name="drawer_item_sign_out">Sign out</string>
+    <string name="drawer_item_sign_in">Sign in</string>
+    <string name="drawer_item_about_us">About ODK-X</string>
+    <string name="drawer_item_docs">ODK-X Docs</string>
+
+    <string name="authenticated_user">Authenticated User</string>
+    <string name="anonymous_user">Anonymous</string>
+    <string name="logged_out">Logged Out</string>
+    <string name="enter_server_url">Enter Server URL</string>
+    <string name="update_url">Update Url</string>
+    <string name="choose_demo_server">Choose Demo Server</string>
+    <string name="verify_server_details">Verify Server Details</string>
+    <string name="scan_qr">Scan QR</string>
+    <string name="enter_password">Password</string>
+    <string name="sign_in_to_sync">Sign in to Sync</string>
+    <string name="sign_in_type">Sign in Type :</string>
+    <string name="username_label">Username :</string>
+    <string name="last_synced_time">Last Synced Time :</string>
+    <string name="server_url_label">Server URL :</string>
+    <string name="sync_type">Sync Type :</string>
+    <string name="sync_button_label">Sync</string>
+    <string name="server_verification_status">Server Verification Status:</string>
+    <string name="server_anonymous_access">Server Anonymous Access:</string>
+    <string name="verify_server_button_label">Verify Server</string>
+    <string name="username_of_user_label">Username of User :</string>
+    <string name="verification_status_label">Verification Status :</string>
+    <string name="verify_user_button_label">Verify User</string>
+    <string name="verified">Verified</string>
+    <string name="not_verified">Not Verified</string>
+    <string name="not_known_yet">Not Known Yet</string>
+    <string name="allowed">Allowed</string>
+    <string name="not_allowed">Not Allowed</string>
+    <string name="user_logged_out_label">User is Logged Out</string>
+    <string name="user_anonymous_label">User is Anonymous</string>
+    <string name="switch_sign_in_type">Switch Sign In Type</string>
+    <string name="sign_in_using_credentials">Sign in using Credentials</string>
+    <string name="set_credentials">Set Credentials</string>
+    <string name="sign_in_as_anonymous">Sign in as Anonymous User</string>
+
+</resources>
